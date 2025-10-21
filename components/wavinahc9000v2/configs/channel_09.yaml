@@ -127,6 +127,8 @@ switch:
       return true;
     lambda: |-
       int mode = data[1];
+      ESP_LOGD("main","data[0] for Channel 09 is: %i",data[0]);
+      ESP_LOGD("main","data[1] for Channel 09 is: %i",data[1]);
       ESP_LOGD("main","MODE for Channel 09 is: %i",mode);    
       return mode;
 # ----------- Climate ----------- #
