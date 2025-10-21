@@ -99,7 +99,7 @@ switch:
       - 0x02
       - 0x07
       - $channel_09
-      - 0x01
+      - 0x03
     write_lambda: |-
       ESP_LOGD("main","Modbus Switch incoming state for channel 09 = %s",ONOFF(x));
       bool state = ONOFF(x);
