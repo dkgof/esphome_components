@@ -57,15 +57,6 @@ binary_sensor:
       - $channel_09
       - 0x01
     bitmask: 0x0010
-    lambda: |-
-        ESP_LOGI("","Lambda incoming value=%f - data array size is %d",x,data.size());
-        ESP_LOGI("","Sensor properties: adress = 0x%X, offset = 0x%X value type=%d",item->start_address,item->offset,item->sensor_value_type);
-        int i=0 ;
-        for (auto val : data) {
-          ESP_LOGI("","data[%d]=0x%02X (%d)",i,data[i],data[i]);
-          i++;
-        }
-        return x;
 # ----------- Number ----------- #
 number:
   - platform:               modbus_controller
