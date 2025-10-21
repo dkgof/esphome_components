@@ -99,7 +99,7 @@ switch:
       - 0x02
       - 0x07
       - $channel_09
-      - 0x03
+      - 0x01
     write_lambda: |-
       ESP_LOGD("main","Modbus Switch incoming state for channel 09 = %s",ONOFF(x));
       bool state = ONOFF(x);
@@ -127,9 +127,6 @@ switch:
       return true;
     lambda: |-
       int mode = data[1];
-      for (int i = 0; i < data.size(); i++) {
-        ESP_LOGD("DEBUG", "channel 09 data[%d] = 0x%02X", i, data[i]);
-      }
       ESP_LOGD("main","MODE for Channel 09 is: %i",mode);    
       return mode;
 # ----------- Climate ----------- #
